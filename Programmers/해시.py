@@ -25,4 +25,4 @@ def solution(participant, completion):
             return participant[i]
         return participant[len(participant)-1]
     
-    ## for test commit
+    ## for test commit  
