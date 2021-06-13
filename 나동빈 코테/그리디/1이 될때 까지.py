@@ -13,3 +13,19 @@ while True:
     count += 1
 
 print(count)
+
+
+# 해설
+result = 0
+while True:
+    target = (n // m) * m
+    result += (n - target)
+    n = target
+    
+    if n < k:
+        break
+    result += 1
+    n //= m
+    
+result += (n - 1)
+print(reuslt)
