@@ -9,7 +9,7 @@ def solution(n, lost, reserve):
     answer = n
     
     reverser = [i for i in reserve if i not in lost]
-    
+
     lost, reserve = list(set(lost) - set(reserve)), list(set(reserve) - set(lost))
     
     for reserve_num in reserve:
