@@ -18,7 +18,7 @@ zeros = [(i, j) for i in range(9) for j in range(9) if board[i][j] == 0]
 def is_promising(row, col):
     promising = [1,2,3,4,5,6,7,8,9]  
     
-    #행열 검사
+    #행렬 검사
     for k in range(9):
         #row
         if board[row][k] in promising:

@@ -1,0 +1,46 @@
+<html>
+<head>
+ <meta charset="UTF-8" />
+ <title>[프로그래머스]파일명 정렬</title> <!-- (문제 이름) -->
+ <!-- todo : https://programmers.co.kr/learn/courses/30/lessons/17686 (문제 링크)--> 
+</head>
+<body>
+ <script>
+   function solution(a, b) { // (풀이 시작, 풀이에 대한 설명은 주석으로 추가)
+    let answer = '';
+    let weeks = ["THU","FRI","SAT","SUN","MON","TUE","WED"];
+    let calender = {
+        "1" : 31, "2" : 29, "3" : 31, "4" : 30, "5" : 31, "6" : 30,
+        "7" : 31, "8" : 31, "9" : 30, "10" : 31, "11" : 30, "12" : 31
+    }
+
+    let day = b;
+
+    for (let key in calender) {
+        // 객체 반복문 일 경우 in 을 사용하여 key 값을 가져오기
+        // 원하는 달 전까지 객체 값으로 day에 더해주기
+        if (Number(key) !== a) day += calender[key];
+        else break;
+    }
+    
+    // 인덱스 번호를 위해 나누기 7을 했습니다.
+    let idx = day % 7;
+    answer = weeks[idx];
+
+    return answer;
+   } // (풀이 끝)
+
+   // TEST CASE
+   // ["img12.png", "img10.png", "img02.png", "img1.png", "IMG01.GIF", "img2.JPG"]
+   let a = 5
+   let b =24
+   result = "TUE"
+
+   console.log(solution(a, b)); // (콘솔에서 확인 가능하도록 작성)
+   /**
+     * * keyword : 달력 알고리즘
+     * * template : 달력 만들기
+   */
+ </script>
+</body>
+</html>
