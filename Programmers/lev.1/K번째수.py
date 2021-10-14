@@ -21,14 +21,3 @@ def solution(array, commands):
 array = [1, 5, 2, 6, 3, 7, 4]
 commands = [[2, 5, 3], [4, 4, 1], [1, 7, 3]]
 print(solution(array, commands))
-
-function solution(array, commands) {
-    const answer = [];
-
-    for (let command of commands) {
-        let [i, j, k] = command
-        answer.push(array.slice(i-1,j).sort((a, b) => a - b)[k-1])
-    }
-
-    return answer;
-}

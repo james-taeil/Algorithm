@@ -2,7 +2,6 @@ n, m = map(int, input().split())
 
 # 사용자가 움직일 수 있는 공간 0 초기화
 d = [[0] * m for _ in range(n)]
-print(d)
 x, y, direction = map(int, input().split())
 d[x][y] = 1 
 
@@ -22,7 +21,7 @@ def turn_left():
     # 북쪽을 바라볼때 0이어야 하니까 서쪽을 볼때 3으로 만들어 준다.
     if direction == -1:
         direction = 3
-1719412
+
 # 게임 시작
 count = 1
 turn_time = 0
