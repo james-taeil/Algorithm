@@ -15,6 +15,10 @@ function solution(a, b) {
     let idx = day % 7;
     answer = weeks[idx];
 
+    // let date = new Date(`2016,${a},${b}`)
+
+    // console.log(weeks[date.getDay()])
+
     return answer;
 }
 
