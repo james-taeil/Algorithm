@@ -12,19 +12,28 @@ for 문으로 숫자 탐색해서 한 리스트에 담기
 첫번째 부터 0인지 확인 후 0이면 슬라이스
 약수 구하기
 '''
+import re
 
-s = "gasd0asdfh8asdf87asdf7g2"
+def solution(s:str):
+    p = re.compile('[0-9]+')
+    m = int(''.join(p.findall(s)))
+    
+    # 약수 갯수
+    # sum = 0
+    
+    # for i in s:
+    #     if i.isdigit():
+    #         sum = (sum * 10) + int(i)
+    # print(sum)
+    
+    count = 0
+    
+    for i in range(1, m + 1):
+        if m % i == 0:
+            count += 1
+    
+    return count
 
-string = 0
 
-for i in s:
-    if i.isdecimal():
-        string = string * 10 + int(i)
-        
-cnt = 0
-
-for i in range(1, string+1):
-    if string%i == 0:
-        cnt += 1
-
-print(string, cnt)
+s = "gasd0asdfh2asdf8asdfg"
+print(solution(s))
