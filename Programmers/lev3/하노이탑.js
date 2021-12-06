@@ -1,6 +1,10 @@
 const solution = (n) => {
     const answer = [];
 
+    // n : 원반의 개수
+    // src : 출발지 기둥
+    // dst : 마지막 기둥
+    // mid : 가운데 기둥
     const hanoi = (n, src, dst, mid) => { 
         if (n === 1) {
             answer.push([src, dst]);
