@@ -12,7 +12,6 @@ function solution(n) {
         }
     }
     return n;
-
 }
 
 let n = 78;
