@@ -1,13 +1,19 @@
 function solution(n) {
-    let nbi = Number(n).toString(2);
-    let nbiCount = nbi.match(/1/g).length;
-    while(true){
-        n+=1;
-        let nextbi = Number(n).toString(2);
-        let nextbiCount = nextbi.match(/1/g).length;
-        if(nbiCount == nextbiCount){
+    let nString = Number(n).toString(2);
+    let nCount = nString.match(/1/g).length;
+
+    while(true) {
+        n += 1;
+        let nNext = Number(n).toString(2);
+        let nextCount = nNext.match(/1/g).length;
+        
+        if(nCount === nextCount) {
             break;
         }
     }
     return n;
+
 }
+
+let n = 78;
+console.log(solution(n));
