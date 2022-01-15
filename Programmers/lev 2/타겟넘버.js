@@ -14,7 +14,6 @@ const solution = (numbers, target) => {
     return answer;
 }
 
-
 let numbers = [1, 1, 1, 1, 1];
 let target = 3;
 console.log(solution(numbers, target));
