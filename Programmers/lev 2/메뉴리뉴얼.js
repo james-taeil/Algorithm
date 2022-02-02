@@ -23,6 +23,7 @@ const solution = (orders, course) => {
   menu = [...menu.entries()].filter(item => item[1] > 1).sort((a, b) => b[0].length - a[0].length);
 
   let result = [];
+  
   course.map(num => {
     let max = 0;
     const temp = menu.filter(([k, v]) => {
