@@ -1,6 +1,5 @@
 const sdoku = (n) => {
   // let board = Array.from(Array(n), () => Array(n).fill(0));
-
   let board = [
     [1, 4, 3, 6, 2, 8, 5, 7, 9],
     [5, 7, 2, 1, 3, 9, 4, 7, 8],
