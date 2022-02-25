@@ -24,3 +24,4 @@ for n in N:
         n_dic[n] = binary(n, N, start, end)
 
 print(' '.join(str(n_dic[x]) if x in n_dic else '0' for x in M ))
+
