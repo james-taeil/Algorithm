@@ -7,7 +7,8 @@ grp = []
 cnt = 0
 dx = [-1,1,0,0]
 dy = [0,0,-1,1]
- 
+
+# DFS
 def dfs(x,y):
     global cnt
     if x<0 or x>=n or y<0 or y>=n:
