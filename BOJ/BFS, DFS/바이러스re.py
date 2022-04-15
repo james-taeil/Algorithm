@@ -12,6 +12,8 @@ for _ in range(m):
     graph[a].append(b)
     graph[b].append(a)
     
+print(graph)
+
 visited = [0] * (n + 1)
 result = 0
 
