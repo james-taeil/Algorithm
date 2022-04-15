@@ -1,15 +1,28 @@
-const solution = (s) => {
+function solution(s) {
   let answer = 0;
-  let arr = [];
+  let sLength = s.length;
+  let newArr = [];
+  for (let i = 1; i < parseInt(sLength/2); i++) {
+      let count = 1;
+      let str = '';
 
-  for (let j = 1; j < parseInt(s.length / 2); j++) {
-    for (let i = 0; i < s.length; i+=j) {
-      let current = s.substr(i, j);
-      let next = s.substr(i + j, j);
-      console.log(current, next);
-    }
+      for (let j = 0; j < sLength; j+=i) {
+          let current = s.substr(j, i);
+          let next = s.substr(j+i, i);
+
+          if (current === next) {
+              count++;
+          } else {
+              if (count > 1) str += count + current
+              else str += current
+              count = 1;
+          }
+      }
+      newArr.push(str.length);
   }
+  answer = Math.min(...newArr)
 
+  return answer;
 }
 
 let s = "aabbaccc";
