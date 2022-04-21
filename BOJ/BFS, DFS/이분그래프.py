@@ -22,7 +22,6 @@ def bfs(start, group):
               
     return True
     
-
 for _ in range(int(input())):
     V, E = map(int, input().spilit())
     
