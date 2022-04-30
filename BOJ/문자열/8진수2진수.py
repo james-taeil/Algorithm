@@ -1,1 +1,2 @@
-print(bin(int(input), 8)[2:])
+ch = bin(int(input), 8)[2:]
+print(ch)
