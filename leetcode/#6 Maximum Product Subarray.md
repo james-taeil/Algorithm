@@ -56,3 +56,15 @@ min_num = min(num, max_num * num, min_num * num)
 
 위 코드에서 위와 아래는 다르게 결과가 나온다.
 무슨 차이인지 잘 모르겠다.
+
+
+```py
+tmp = max_num
+max_num = max(num, max_num * num, min_num * num)
+min_num = min(num, tmp * num, min_num * num)
+```
+
+`tmp = max_num`을 사용해야 코드가 돌아간다. 짐작컨데 min_num은 max_num이 갱신 후라 값이 달라지는 것 같다.
+즉, a, b = max(), min()은 스왑이라고 생각하면 될 것 같다.
+
+스왑은 내부 스택에서 별로도 진행되서 max_num이 바뀌지 않는 것 같다.
