@@ -68,3 +68,4 @@ min_num = min(num, tmp * num, min_num * num)
 즉, a, b = max(), min()은 스왑이라고 생각하면 될 것 같다.
 
 스왑은 내부 스택에서 별로도 진행되서 max_num이 바뀌지 않는 것 같다.
+[python swap](https://blog.seulgi.kim/2017/01/python-swap.html)
